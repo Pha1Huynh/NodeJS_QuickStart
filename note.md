@@ -38,11 +38,24 @@
 
 - Cấu hình MVC cho prject
 
+  - Tài liệu tham khảo:
+    https://mherman.org/blog/node-postgres-sequelize/
+    https://sequelize.org/docs/v6/other-topics/migrations/#installing-the-cli
+
 1. Trong folder controller, tạo homeController.js, viết hàm, export hàm rồi vào route(web.js) import
 2. Cài đặt package sequelize và sequelize-cli:
    npm install --save sequelizecd
    npm install --save-dev sequelize-cli
 3. Tạo file .sequelizerc tại root
 4. Tạo file config, models, migrations, seeders:
-   cd src
+
    node_modules/.bin/sequelize init
+
+5. Tạo dữ liệu file model + migration:
+   npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+6. tải mysql2:
+   npm install --save mysql2
+7. Vào .env, tạo biến NODE_ENV
+8. Vào config, chỉnh lại tên db
+9. Tạo file config để kết nối tới db

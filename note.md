@@ -58,4 +58,5 @@
    npm install --save mysql2
 7. Vào .env, tạo biến NODE_ENV
 8. Vào config, chỉnh lại tên db
-9. Tạo file config để kết nối tới db
+9. Trong thư mục config, tạo connectDB.js để tiến hành kết nối tới db
+10. Tạo hàm connect DB tại file vừa tạo, và import vào server.js

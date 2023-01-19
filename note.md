@@ -80,3 +80,9 @@ CÁC BƯỚC MIGRATE DB:
    DB_DIALECT=postgres
 8. run: npx sequelize-cli db:migrate
 9. vào xampp export DB (chọn custom) -> bỏ tick dump binary column...
+10. Vào web supabase, set up, trong phần setting (hình răng cưa), nhập các thông tin đang hiển thị vào Dbeaver, sau đó test connection, thay host và thêm mật khẩu
+11. Vào lại .env BE và setup lại:
+    DB_SSL=true
+    DB_HOST=db.aydosbjadqinoqtzsole.supabase.co
+    DB_PASSWORD=elementalhero26.
+12. npm start lại, nếu thành công thì db:migrate, sau đó insert lại data

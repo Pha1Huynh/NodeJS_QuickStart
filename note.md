@@ -60,3 +60,23 @@
 8. Vào config, chỉnh lại tên db
 9. Trong thư mục config, tạo connectDB.js để tiến hành kết nối tới db
 10. Tạo hàm connect DB tại file vừa tạo, và import vào server.js
+
+**\*\***\*\***\*\***/////////////////**\*\*\*\***\*\*\*\***\*\*\*\***///////////////////**\*\*\*\***\*\***\*\*\*\***
+CÁC BƯỚC MIGRATE DB:
+
+1. Pgadmin: dùng để chạy server postgres
+2. DBeaver: Sử dụng postgresSQl
+3. Vào Dbeaver: test connection với postgres
+4. Cài pg - pghostore
+5. Chỉnh lại file connectDB, index(model), config.json -> config.js
+6. Vào sequelizerc, chỉnh config.json thành config.js
+7. Khai báo trong .env:
+   DB_SSL=false
+   DB_HOST=localhost
+   DB_DATABASE_NAME=postgres
+   DB_USERNAME=postgres
+   DB_PASSWORD=180699
+   DB_PORT=5432
+   DB_DIALECT=postgres
+8. run: npx sequelize-cli db:migrate
+9. vào xampp export DB (chọn custom) -> bỏ tick dump binary column...

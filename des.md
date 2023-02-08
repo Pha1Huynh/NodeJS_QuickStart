@@ -43,3 +43,4 @@ raw: true,
   item.image = new Buffer(item.image, "base64").toString("binary");
   return item;
   });
+  Đối với mongoose thì phải item.image = new Buffer(item.image, "bufer").toString("binary") ở client.
